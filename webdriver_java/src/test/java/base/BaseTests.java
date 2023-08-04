@@ -23,7 +23,11 @@ public class BaseTests {
     @BeforeClass
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
+
+        driver = new EventFiringWebDriver(new ChromeDriver(chromeOptions));
         driver.register(new EventReporter());
     }
 

@@ -1,0 +1,3 @@
+webdriver_java/target/*
+webdriver_java/resources/*
+.idea
